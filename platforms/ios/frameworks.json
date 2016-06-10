@@ -1,0 +1,7 @@
+{
+    "SystemConfiguration.framework": 1,
+    "CoreData.framework": 1,
+    "libz.dylib": 1,
+    "libsqlite3.dylib": 1,
+    "MessageUI.framework": 1
+}

@@ -1,0 +1,16 @@
+<ion-view view-title="Latest Videos">
+    
+    
+            <ion-content>
+                <ion-list>
+                    <ion-item class="item-remove-animate item-avatar item-icon-right item-thumbnail-left" ng-repeat="video in videos" type="item-text-wrap" ng-click="openModal({{video.id}})" >
+                        <img ng-if='video.thumbnail_size==undefined' ng-src="http://img.youtube.com/vi/{{video.custom_fields.xvideoID[0]}}/default.jpg">
+                <img ng-if='video.thumbnail_size!==undefined' ng-src="{{video.thumbnail_images.thumbnail.url}}">
+                        <h2>{{video.title}}</h2>
+                        <p>{{video.date}}</p>
+                        <p>Author : {{video.author.name}}</p>
+                        <p>Views : {{video.custom_fields.views[0]}} |  Likes : {{video.custom_fields.likes[0]}}</p>
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+</ion-view>

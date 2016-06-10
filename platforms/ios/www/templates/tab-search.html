@@ -1,0 +1,39 @@
+<ion-view view-title="Search from entire app">
+
+    <ion-nav-bar class="bar-positive colour-override">
+        <ion-nav-buttons side="left">
+            <button class="button back-button buttons  button-clear header-item" ng-click="myGoBack()"><i class="ion-arrow-left-c custom-back-button-override"></i>
+            </button>
+        </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <form ng-submit="search(this.searchQuery)">
+        <ion-header-bar class="bar bar-subheader item-input-inset"> 
+            <label class="item-input-wrapper search">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input placeholder="Search..." ng-model="searchkeyword" type="text" ng-enter="searchAll(searchkeyword)"> 
+            </label>
+        </ion-header-bar>
+    </form>
+
+    <ion-content>
+
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar item-icon-right item-thumbnail-left" ng-repeat="video in searches" type="item-text-wrap" ng-click="openModal({{video.id}})" >
+                <img ng-if='video.thumbnail_size == undefined' ng-src="http://img.youtube.com/vi/{{video.custom_fields.xvideoID[0]}}/default.jpg">
+                <img ng-if='video.thumbnail_size !== undefined' ng-src="{{video.thumbnail_images.thumbnail.url}}">
+                <h2>{{video.title}}</h2>
+                <p>{{video.date}}</p>
+                <p>Author : {{video.author.name}}</p>
+                <p>Views : {{video.custom_fields.views[0]}} |  Likes : {{video.custom_fields.likes[0]}}</p>
+            </ion-item>
+            
+            
+            <ion-item ng-show="!searches.length" >
+                <p>No Search Results Found!</p>
+            </ion-item>
+            
+        </ion-list>
+        
+    </ion-content>
+</ion-view>

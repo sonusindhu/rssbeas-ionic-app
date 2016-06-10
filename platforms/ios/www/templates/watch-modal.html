@@ -1,0 +1,30 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+
+<style>
+    iframe, object, embed, video {
+        max-width: 100%;
+    }
+</style>
+
+
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">Watching Video</h1>
+        <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="list">
+            <div ng-bind-html="videoplay" class="h_iframe">
+                
+            </div>
+            <p>Views : {{details.custom_fields.views[0]}} | Likes : {{details.custom_fields.likes[0]}}</p>
+            
+            <button class="button button-full button-positive" ng-click="modal.hide()">Close</button>
+        </div>
+    </ion-content>
+</ion-modal-view>

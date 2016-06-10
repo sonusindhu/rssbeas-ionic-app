@@ -1,0 +1,39 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-bottom tabs-color-active-positive" tabs-swipable>
+
+  <!-- Dashboard Tab -->
+  <ion-tab title="Videos" icon-off="ion-ios-videocam" icon-on="ion-ios-videocam" href="#/tab/dash">
+    <ion-nav-view name="tab-dash"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Schedule Tab -->
+  <ion-tab title="Schedule" icon-off="ion-ios-book-outline" icon-on="ion-ios-book" href="#/tab/schedule">
+    <ion-nav-view name="tab-schedule"></ion-nav-view>
+  </ion-tab>
+
+  <!-- QA Tab -->
+  <ion-tab title="Q/A" icon-off="ion-ios-body-outline" icon-on="ion-ios-body" href="#/tab/qa">
+    <ion-nav-view name="tab-qa"></ion-nav-view>
+  </ion-tab>
+  
+  <!-- Stories Tab -->
+  <ion-tab title="Stories" icon-off="ion-ios-heart-outline" icon-on="ion-ios-heart" href="#/tab/stories">
+    <ion-nav-view name="tab-stories"></ion-nav-view>
+  </ion-tab>
+  
+  <!-- MP3 Tab -->
+  <ion-tab title="Mp3" icon-off="ion-ios-play-outline" icon-on="ion-ios-play" href="#/tab/mp3">
+    <ion-nav-view name="tab-mp3"></ion-nav-view>
+  </ion-tab>
+  
+  <!-- Search Tab -->
+  <ion-tab title="Search" icon-off="ion-search" icon-on="ion-search" href="#/tab/search">
+    <ion-nav-view name="tab-search"></ion-nav-view>
+  </ion-tab>
+
+
+</ion-tabs>

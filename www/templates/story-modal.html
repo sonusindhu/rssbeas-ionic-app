@@ -1,0 +1,19 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive">
+        <h1 class="title">New New Story</h1>
+        <button class="button button-clear button-primary" ng-click="closeStoryModal()">Close</button>
+    </ion-header-bar>
+    <ion-content >
+        <div class="list">
+            <label class="item item-input">
+                <input placeholder="Enter story title..." ng-model="newstory.title" type="text">
+            </label>
+            <label class="item item-input">
+                <textarea ng-model="newstory.fullstory" rows="20" placeholder="Enter full story..."></textarea>
+            </label>
+            <label class="item item-input">
+            <button class="button button-block button-positive" ng-click="sendFeedback(newstory)">Post</button>
+            </label>
+        </div>
+    </ion-content>
+</ion-modal-view>
